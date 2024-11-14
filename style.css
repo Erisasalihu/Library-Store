@@ -1,3 +1,57 @@
 *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    background-image: url(bookshelf.jpg);
+}
+.text-section{
+    width: 50%;
+    height: 100vh;
+    padding: 30px;
+    background-color: #e3dddd;
+    clip-path: polygon(0 0, 80% 0, 100% 30%, 80% 100%, 0 100%);
+}
+.nav{
+    width: 30%;
+    margin: 50px;
+    display: flex;
+    gap: 70px;
     
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+.text-section h1{
+    color: rgb(2, 68, 2);
+    margin: 40px;
+    margin-top: 100px;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.text-section p{
+    width: 50%;
+    text-wrap: wrap;
+    margin: 40px;
+    margin-top: 80px;
+    font-style: italic;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+.text-section button{
+    margin: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 130px;
+    border-color: rgb(222, 121, 6) ;
+    background-color: rgb(222, 121, 6);
+    color: #fff;
+    cursor: pointer;
+
 }
