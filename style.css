@@ -1,13 +1,13 @@
 body {
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
                   url("../../media/examples/lizard.png");
-                  
-    background-size: cover; /* E mbulon gjithë faqen */
-    background-repeat: no-repeat; /* Parandalon përsëritjen e imazhit */
-    background-position: center; /* E qendron imazhin në mes */
+    
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
 }
 
-/* Kontejneri kryesor i faqes */
+
 .container {
     display: flex;
     justify-content: flex-start;
@@ -16,13 +16,13 @@ body {
     align-items: center;
 }
 
-/* Përmbajtja e tekstit në të majtë */
+
 .text-content {
-    max-width: 40%; /* Kufizon gjerësinë e tekstit */
+    max-width: 40%; 
     text-align: left;
 }
 
-/* Navigimi */
+
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -39,7 +39,7 @@ body {
     margin-bottom: 130px;
 }
 
-/* Stili për titullin */
+
 .text-content h1 {
     font-size: 3em;
     color: rgb(2, 68, 2);
@@ -47,7 +47,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* Stili për paragrafët */
+
 .text-content p {
     font-size: 1.2em;
     font-style: italic;
@@ -56,7 +56,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* Stili për butonin */
+
 .text-content button {
     padding: 10px 20px;
     border-radius: 150px;
@@ -67,8 +67,8 @@ body {
     font-size: 1em;
 }
 
-/* Imazhi në të djathtë */
+
 .right-image {
-    width: 35%; /* Bëni imazhin më të vogël */
-    margin-left: 180px; /* Hapësirë ndërmjet imazhit dhe tekstit */
+    width: 35%; 
+    margin-left: 180px; 
 }
