@@ -2,12 +2,17 @@
 *{
     padding: 0;
     margin: 0;
+    
 
 
 }
-.first-page{
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+body{
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
                   url("");
+}
+.first-page{
+    /* background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+                  url(""); */
     
     background-size: cover;
     background-repeat: no-repeat; 
@@ -50,17 +55,15 @@
 
 .text-content h1 {
     font-size: 3em;
-    font-style: italic;
     color: rgb(2, 48, 2);
     font-weight: lighter;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     margin-left: 30px;
 }
 
 
 .text-content p {
     font-size: 1.2em;
-    font-style: italic;
     line-height: 1.6;
     color: #021e0b;
     margin-bottom: 50px;
@@ -92,18 +95,17 @@
     color: rgb(2, 48, 2);
     margin-top: 50px;
     height: 40vh;
+    font-family: sans-serif;
 
 }
 .left-side{
-    width: 30%;
+    width: 34%;
     margin-left: 2%;
-    font-style: italic;
     color: rgb(2, 48, 2);
 }
 .left-side a{
     display: flex;
     text-decoration: none;
-    font-style: italic;
     font-size: 1em;
     margin-top: 15px;
     color: #022c01;
@@ -111,22 +113,26 @@
 }
 
 .middle-side{
-    width: 33%;
-    font-style: italic;
+    width: 20%;
     color: rgb(2, 48, 2);
+    line-height: 23px;
+    margin-right: 100px;
     
 }
 .middle-side p{
-    font-style: italic;
     color: rgb(2, 48, 2);
-    width: 70%;
+    margin-top: 35px;
 }
 
 .right-side{
-    width: 33%;
+    width: 35%;
     margin-right: 2%;
-    font-style: italic;
+    margin-left: 90px;
     color: rgb(2, 48, 2);
+    line-height: 23px;
+}
+.right-side p{
+  margin: 10px 0px;
 }
 .email{
     padding: 7px;
@@ -144,12 +150,13 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
   }
   
   
-  .header {
-    
-    
+  .about {
     width: 100%;
     height: 100vh;
     margin-bottom: 5%;
@@ -160,7 +167,7 @@ body {
     display: flex;
     gap: 45px;
     padding: 30px;
-    margin-left: 15px;
+    margin-left: 50px;
   }
   
   .header-links a {
@@ -173,67 +180,146 @@ body {
   }
   
   
-  
-  .about-us {
+  .about-container {
     width: 100%;
     padding-top: 5%;
-    
-  }
-  
-  .about-container {
     flex: 1; 
-    padding-right: 80px; 
+    margin-right: 80px; 
   }
   
   .about-container h1 {
-    font-size: 2em;
-    font-style: italic;
-    margin-bottom: 20px;
+    font-size: 3em;
     color: rgb(2, 48, 2);
     font-weight: lighter;
+    margin-bottom: 40px;
+    margin-left: 5%;
+    font-size: 40px;
     
 }
   
   
   .about-container p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 1.4;
     color: rgb(2, 48, 2);
     margin-bottom: 50px;
-    width: 50%;
-    margin-left: 20px;
+    width: 45%;
+    margin-left: 5%;
     
   }
   
   
-  .image-container {
-
+  .first-image {
     width: auto;
     text-align: right; 
-    margin-top: -43%;
-    width: 100%; 
+    margin-top: -24%;
+    width: 90%; 
     height: 100%; 
     object-fit: cover; 
-    
-    
-    
-    
+  
   }
   
-  .image-container img {
-    max-width: 25%; 
-    height: 10pc;
+  .first-image img {
+   
     border: 10px ;
     border-radius: 20px;
-    margin-bottom: 100px;
-    width: 35%;
-    width: 100%; 
+    width: 20%; 
     height: 100%; 
     object-fit: cover; 
+  }
+  
+
+  .second-about{
+    display: flex;
+    margin-top: 10%;
+  }
+  .second-image{
+    width: auto;
+    text-align: right; 
+    margin-top: -15%;
+    margin-left: -7%;
+    width: 50%;  
+    object-fit: cover;
+  }
+  .second-image img{
+    border: 10px ;
+    border-radius: 20px;
+    width: 60%; 
+    height: 80%;
+    object-fit: cover;
+  }
+
+  .second-about-container{
+    width: 100%;
+    margin-left: 10%;
+  }
+  .second-about-container h1{
+    font-size: 3em;
+    margin-top: -20%;
+    color: rgb(2, 48, 2);
+    font-weight: lighter;
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  .second-about-container p{
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.4;
+    color: rgb(2, 48, 2);
+    margin-bottom: 50px;
+    width: 70%;
+  }
+
+
+
+  .third-about-container {
+    width: 100%;
+    height: 80vh;
+    margin-top: 5%;
+    flex: 1; 
+    margin-right: 80px; 
+  }
+  
+  .third-about-container h1 {
+    font-size: 3em;
+    color: rgb(2, 48, 2);
+    font-weight: lighter;
+    margin-bottom: 40px;
+    margin-left: 5%;
+    font-size: 40px;
     
-    
+}
+  
+  
+  .third-about-container p {
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.4;
+    color: rgb(2, 48, 2);
+    margin-bottom: 50px;
+    width: 45%;
+    margin-left: 5%;
     
   }
   
-   
+  
+  /* .third-image {
+    text-align: right; 
+     margin-top: -40%; 
+    width: 90%;  
+    object-fit: cover; 
+}
+*/
+
+  
+  .third-image img {
+    float: right;
+    margin-top: -43%;
+    margin-right: 10%;
+    border: 10px ;
+    border-radius: 20px;
+    width: 20%; 
+    height: 100%; 
+    object-fit: cover; 
+  }
