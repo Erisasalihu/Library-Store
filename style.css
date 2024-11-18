@@ -1,4 +1,3 @@
-
 *{
     padding: 0;
     margin: 0;
@@ -70,6 +69,7 @@ body{
     width: 65%;
     margin-left: 30px;
     margin-top: 10%;
+    font-style: italic;
 }
 
 
@@ -102,6 +102,7 @@ body{
     width: 34%;
     margin-left: 2%;
     color: rgb(2, 48, 2);
+    font-style: italic;
 }
 .left-side a{
     display: flex;
@@ -117,6 +118,7 @@ body{
     color: rgb(2, 48, 2);
     line-height: 23px;
     margin-right: 100px;
+    font-style: italic;
     
 }
 .middle-side p{
@@ -130,9 +132,11 @@ body{
     margin-left: 90px;
     color: rgb(2, 48, 2);
     line-height: 23px;
+    font-style: italic;
 }
 .right-side p{
   margin: 10px 0px;
+  font-style: italic;
 }
 .email{
     padding: 7px;
@@ -213,7 +217,7 @@ body {
   .first-image {
     width: auto;
     text-align: right; 
-    margin-top: -24%;
+    margin-top: -30%;
     width: 90%; 
     height: 100%; 
     object-fit: cover; 
@@ -237,7 +241,7 @@ body {
   .second-image{
     width: auto;
     text-align: right; 
-    margin-top: -15%;
+    margin-top: -13%;
     margin-left: -7%;
     width: 50%;  
     object-fit: cover;
