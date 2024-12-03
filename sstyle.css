@@ -31,13 +31,14 @@ h1 {
 .contact-form {
     display: flex;
     flex-direction: column;
+    
 }
 
 .contact-form label {
     margin-bottom: 8px;
     font-size: 14px;
     color: #0d0c0c;
-    font-style: italic;
+    
 }
 
 .contact-form input, .contact-form textarea {
@@ -46,6 +47,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    font-style: italic;
 }
 
 .contact-form textarea {
