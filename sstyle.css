@@ -13,6 +13,25 @@ body {
     height: 100vh;
 }
 
+.back-arrow{
+    position: fixed;
+    display: flex;
+    height: auto;
+    left: 20px;
+    top: 20px;
+    align-items: center;
+    z-index: 10;
+
+}
+.back-arrow a{
+    color: white;
+    font-size: 40px;
+
+}
+.back-arrow a:hover{
+    color: rgba(0, 0, 0, 0.664);
+    
+}
 .contact-form-container {
     background-color: #fff;
     padding: 30px;
