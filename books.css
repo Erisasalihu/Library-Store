@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: linear-gradient(to right, beige 25%, #c3a27a 50%);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
 
 
 .navigation-bar {
@@ -195,6 +201,9 @@
 
 
 /*SERVICES*/
+body{
+    background: linear-gradient(to right, beige 25%, #c3a27a 50%);
+}
 
 .services{
     width: 100%;
@@ -233,6 +242,8 @@
 
 /*FOOTER*/
 
+
+
 .footer-info{
     display: flex;
     width: 100%;
@@ -240,6 +251,8 @@
     margin-top: 90px;
     height: 40vh;
     font-family: sans-serif;
+    
+    
 
 }
 .left-side{
