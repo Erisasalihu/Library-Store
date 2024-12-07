@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+    background: linear-gradient(to right, beige 25%, #c3a27a 50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ body {
 
 }
 .back-arrow a{
-    color: white;
+    color: #c3a27a;
     font-size: 40px;
 
 }
@@ -74,7 +74,7 @@ h1 {
 }
 
 .contact-form button {
-    background-color: rgb(63, 53, 101);
+    background-color: #c3a27a;
     color: white;
     border: none;
     padding: 12px;
@@ -84,5 +84,5 @@ h1 {
 }
 
 .contact-form button:hover {
-    background-color: #cccf7f;
+    background-color: beige;
 }
