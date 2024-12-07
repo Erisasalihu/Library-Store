@@ -79,6 +79,7 @@ body{
     text-align: start;
     padding-left: 25px;
     border: 1px solid black;
+    background: beige;
 }
 
 .search-icon{
