@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="books.css" />
+    <link rel="stylesheet" href="nav.css" />
     <title>Books</title>
-  </head>
-  <body>
-    <div class="navigation-bar">
 
-        <div class="links">
-            <a href="./library.html">HOME</a>
-            <a href="./about.html">ABOUT</a>
-            <a href="./books.html">BOOKS</a>
-            <a href="./contact.html">CONTACT</a>
-        </div>
-    
-        <div class="icons">
-          <a href="#"><i class='bx bx-heart'></i></i></a>
-          <a href="#"><i class='bx bx-cart'></i></a>
-          <a href="./login.html" class="icons_login">Login</a>
-          
-      </div>
-      </div>
-      <div class="search-bar">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="links">
+            <ul>
+                <a href="./library.html">HOME</a>
+                <a href="./about.html">ABOUT</a>
+                <a href="./books.html">BOOKS</a>
+                <a href="./contact.html">CONTACT</a>
+            </ul>
+            <div class="icons">
+                <a href="#"><i class='bx bx-heart'></i></i></a>
+                <a href="#"><i class='bx bx-cart'></i></a>
+                <a href="./login.html" class="icons_login">Login</a>
+            </div>
+        </nav>
+    </div>
+    <div class="search-bar">
         <input type="search" placeholder="What are you looking for?">
-        <a href="#" class="search-icon"><i class='bx bx-search' ></i></a>
-      </div>
-      
-      <div class="container">
-        <img src="./images/Screenshot_3.png" class="foto1">
-      </div>
-        
+        <a href="#" class="search-icon"><i class='bx bx-search'></i></a>
+    </div>
 
-      <!-- BOOKS -->
-       <div class="featured-books">
+    <img src="./images/Screenshot_3.png" class="foto1">
+
+
+    <!-- BOOKS -->
+    <div class="featured-books">
         <h1>Featured Books</h1>
 
         <div class="featured-book-box">
@@ -207,18 +210,18 @@
                 </div>
             </div>
         </div>
-       </div>
+    </div>
 
-        <!-- BOOKS -->
-       <div class="more-books">
+    <!-- BOOKS -->
+    <div class="more-books">
         <img src="./images/bookss1.png" class="groups">
         <img src="./images/bookss2.png" class="groups">
         <img src="./images/bookss3.png" class="groups">
-       </div>
+    </div>
 
-       <!-- BESTSELLER -->
+    <!-- BESTSELLER -->
 
-       <div class="featured-books">
+    <div class="featured-books">
         <h1>Bestsellers</h1>
 
         <div class="featured-book-box">
@@ -296,66 +299,88 @@
         </div>
 
 
-        <div class="container">
             <img src="./images/Screenshot_2.png" class="foto1">
-          </div>
 
 
 
-      <!-- services -->
-      <div class="services">
-        <div class="services-box">
+        <!-- services -->
+        <div class="services">
+            <div class="services-box">
 
-            <div class="services-card">
-                <i class='bx bxs-truck' ></i>
-                <h3>Fast Delivery</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident minima quidem quibusdam laborum iste!</p>
-            </div>
+                <div class="services-card">
+                    <i class='bx bxs-truck'></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
+                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
+                        minima quidem quibusdam laborum iste!</p>
+                </div>
 
-            <div class="services-card">
-                <i class='bx bx-headphone' ></i>
-                <h3>24 x 7 Services</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident minima quidem quibusdam laborum iste!</p>
-            </div>
+                <div class="services-card">
+                    <i class='bx bx-headphone'></i>
+                    <h3>24 x 7 Services</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
+                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
+                        minima quidem quibusdam laborum iste!</p>
+                </div>
 
-            <div class="services-card">
-                <i class='bx bxs-purchase-tag-alt' ></i>
-                <h3>Best Deal</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident minima quidem quibusdam laborum iste!</p>
-            </div>
+                <div class="services-card">
+                    <i class='bx bxs-purchase-tag-alt'></i>
+                    <h3>Best Deal</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
+                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
+                        minima quidem quibusdam laborum iste!</p>
+                </div>
 
-            <div class="services-card">
-                <i class='bx bxs-lock-alt' ></i>
-                <h3>Secure payment</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident minima quidem quibusdam laborum iste!</p>
-            </div>
-        </div>
-      </div>
-
-
-      <!-- FOOTER -->
-      <section class="second">
-        <div class="footer-info">
-            <div class="left-side">
-                <h2>THE LIBRARY STORE</h2>
-                <a href="">About Us</a>
-                <a href="">Contact Us</a>
-                <a href="">Library Foundation</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Terms of Service</a>
-                <a href="">Refund policy</a>
-            </div>
-    
-            <div class="middle-side">
-            <p>The Library Store is part of the Library Foundation of Pristina, which supports the Pristinas Public Library</p>
-            </div>
-    
-            <div class="right-side">
-                <h2>Keep in touch</h2>
-                <p>Never Miss a Beat! Sign up for our newsletter and be the first to hear about new products, professional resources, limited edition merchandise, discounts and more when you sign up for our emails</p>
-                <input type="email" placeholder="email@example.com" class="email">
+                <div class="services-card">
+                    <i class='bx bxs-lock-alt'></i>
+                    <h3>Secure payment</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
+                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
+                        minima quidem quibusdam laborum iste!</p>
+                </div>
             </div>
         </div>
-    </section>
-  </body>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+            <div class="footer-info">
+                <div class="left-side">
+                    <h2>THE LIBRARY STORE</h2>
+                    <a href="">About Us</a>
+                    <a href="">Contact Us</a>
+                    <a href="">Library Foundation</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms of Service</a>
+                    <a href="">Refund policy</a>
+                </div>
+
+                <div class="middle-side">
+                    <p>The Library Store is part of the Library Foundation of Pristina, which supports the Pristinas
+                        Public Library</p>
+                </div>
+
+                <div class="right-side">
+                    <h2>Keep in touch</h2>
+                    <p>Never Miss a Beat! Sign up for our newsletter and be the first to hear about new products,
+                        professional resources, limited edition merchandise, discounts and more when you sign up for our
+                        emails</p>
+                    <input type="email" placeholder="email@example.com" class="email">
+                </div>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script>
+            $('.featured-book-box').slick({
+                dots: true,
+                slidesToShow: 5,
+                slidesToScroll: 5
+            })
+        </script>
+</body>
+
 </html>

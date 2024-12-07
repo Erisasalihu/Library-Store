@@ -13,9 +13,9 @@
 
   <body>
     <a href="library.html" class="back-arrow">
-      <i class="fa-solid fa-arrow-left"></i> 
+      <i class="fa-solid fa-arrow-left"></i>
     </a>
-    
+
     <div class="container" id="container">
       <div class="form-container sign-up">
         <form>
@@ -31,10 +31,23 @@
             ></a>
           </div>
           <span>or use your email for registeration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button>Register</button>
+          <div class="input-wrapper">
+            <input id="register-name" type="text" placeholder="Name" />
+            <div class="input-error"></div>
+          </div>
+          <div class="input-wrapper">
+            <input id="register-email" type="email" placeholder="Email" />
+            <div class="input-error"></div>
+          </div>
+          <div class="input-wrapper">
+            <input
+              id="register-password"
+              type="password"
+              placeholder="Password"
+            />
+            <div class="input-error"></div>
+          </div>
+          <button id="form-register-btn">Register</button>
         </form>
       </div>
       <div class="form-container sign-in">
@@ -51,10 +64,16 @@
             ></a>
           </div>
           <span>or use your email password</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <div class="input-wrapper">
+            <input id="login-email" type="email" placeholder="Email" />
+            <div class="input-error"></div>
+          </div>
+          <div class="input-wrapper">
+            <input id="login-password" type="password" placeholder="Password" />
+            <div class="input-error"></div>
+          </div>
           <a href="#">Forget Your Password?</a>
-          <button>Login</button>
+          <button id="form-login-btn">Login</button>
         </form>
       </div>
       <div class="toggle-container">
