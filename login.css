@@ -15,6 +15,26 @@ body{
     flex-direction: column;
     height: 100vh;
 }
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .back-arrow i {
+    margin-right: 8px;
+  }
+  
+  .back-arrow:hover {
+    color: rgba(0, 0, 0, 0.664);
+  }
+
 
 .container{
     background-color: #fff;
