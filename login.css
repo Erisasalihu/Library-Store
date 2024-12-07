@@ -8,7 +8,7 @@
 
 body{
     
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+    background-image: linear-gradient(to right, beige 25%, #c3a27a 50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@ body{
     top: 20px;
     left: 20px;
     font-size: 35px;
-    color: white;
+    color: #c3a27a;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@ body{
 .container{
     background-color: #fff;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgb(84, 24, 144);
+    box-shadow: 0 5px 15px rgb(58, 43, 1);
     position: relative;
     overflow: hidden;
     width: 768px;
@@ -66,7 +66,7 @@ body{
 }
 
 .container button{
-    background-color: #7762aa;
+    background-color: #c3a27a;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -180,9 +180,9 @@ body{
 }
 
 .toggle{
-    background-color: #7762aa;
+    background-color: #c3a27a;
     height: 100%;
-    background: #7762aa;
+    background: #c3a27a;
     color: #fff;
     position: relative;
     left: -100%;
