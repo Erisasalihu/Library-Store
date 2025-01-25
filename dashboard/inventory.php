@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users</title>
-    <link rel="stylesheet" href="../dashbard.css" />
+    <title>Inventory</title>
+    <link rel="stylesheet" href="../dashboard.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -21,7 +21,7 @@
         </div>
         <div class="nav_items">
           <ul>
-            <li class="active">
+            <li>
               <a href="./users.html">
                 <i class="bi bi-person"></i>
                 <p>Users</p>
@@ -33,7 +33,7 @@
                 <p>Books</p>
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="./inventory.html">
                 <i class="bi bi-box"></i>
                 <p>Inventory</p>
@@ -65,33 +65,45 @@
 
       <section class="content">
         <div class="content_wrapper">
-          <h2 class="content_title">Users</h2>
+          <h2 class="content_title">Inventory</h2>
+
           <div class="content_wrapper_top">
-            <form>
-              <input
-                type="text"
-                name="search"
-                class="input_search"
-                placeholder="Search"
-              />
-            </form>
+            <input type="text" class="input_search" placeholder="Search" />
           </div>
 
           <table>
             <thead>
               <tr>
                 <th class="table_id">Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Borrowed Books</th>
-                <th>Returned Books</th>
+                <th class="table_id">Book Id</th>
+                <th>Book ISBN</th>
+                <th>Book Name</th>
+                <th>Total Copies</th>
+                <th>Available Copies</th>
+                <th></th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>#1234</td>
+                <td>Kronike ne gure</td>
+                <td>20</td>
+                <td>15</td>
+                <td>
+                  <div class="table_actions">
+                    <a href="./edit_inventory.html">
+                      <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <button>
+                      <i class="bi bi-trash3" style="color: red"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
-          <div class="table_no_data">No data</div>
         </div>
       </section>
     </main>

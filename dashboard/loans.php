@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory</title>
-    <link rel="stylesheet" href="../dashbard.css" />
+    <title>Loans</title>
+    <link rel="stylesheet" href="../dashboard.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -33,13 +33,13 @@
                 <p>Books</p>
               </a>
             </li>
-            <li class="active">
+            <li>
               <a href="./inventory.html">
                 <i class="bi bi-box"></i>
                 <p>Inventory</p>
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="./loans.html">
                 <i class="bi bi-card-checklist"></i>
                 <p>Loans</p>
@@ -65,45 +65,34 @@
 
       <section class="content">
         <div class="content_wrapper">
-          <h2 class="content_title">Inventory</h2>
-
+          <h2 class="content_title">Loans</h2>
           <div class="content_wrapper_top">
-            <input type="text" class="input_search" placeholder="Search" />
+            <form>
+              <input
+                type="text"
+                name="search"
+                class="input_search"
+                placeholder="Search"
+              />
+            </form>
           </div>
 
           <table>
             <thead>
               <tr>
                 <th class="table_id">Id</th>
-                <th class="table_id">Book Id</th>
-                <th>Book ISBN</th>
-                <th>Book Name</th>
-                <th>Total Copies</th>
-                <th>Available Copies</th>
-                <th></th>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Loan Date</th>
+                <th>Return Date</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>#1234</td>
-                <td>Kronike ne gure</td>
-                <td>20</td>
-                <td>15</td>
-                <td>
-                  <div class="table_actions">
-                    <a href="./edit_inventory.html">
-                      <i class="bi bi-pencil-square"></i>
-                    </a>
-                    <button>
-                      <i class="bi bi-trash3" style="color: red"></i>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
+
+          <div class="table_no_data">No data</div>
         </div>
       </section>
     </main>

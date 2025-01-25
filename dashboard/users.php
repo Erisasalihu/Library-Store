@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loans</title>
-    <link rel="stylesheet" href="../dashbard.css" />
+    <title>Users</title>
+    <link rel="stylesheet" href="../dashboard.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -21,7 +21,7 @@
         </div>
         <div class="nav_items">
           <ul>
-            <li>
+            <li class="active">
               <a href="./users.html">
                 <i class="bi bi-person"></i>
                 <p>Users</p>
@@ -39,7 +39,7 @@
                 <p>Inventory</p>
               </a>
             </li>
-            <li class="active">
+            <li>
               <a href="./loans.html">
                 <i class="bi bi-card-checklist"></i>
                 <p>Loans</p>
@@ -65,7 +65,7 @@
 
       <section class="content">
         <div class="content_wrapper">
-          <h2 class="content_title">Loans</h2>
+          <h2 class="content_title">Users</h2>
           <div class="content_wrapper_top">
             <form>
               <input
@@ -81,17 +81,16 @@
             <thead>
               <tr>
                 <th class="table_id">Id</th>
-                <th>ISBN</th>
-                <th>Title</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Loan Date</th>
-                <th>Return Date</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Borrowed Books</th>
+                <th>Returned Books</th>
               </tr>
             </thead>
             <tbody></tbody>
           </table>
-
           <div class="table_no_data">No data</div>
         </div>
       </section>
