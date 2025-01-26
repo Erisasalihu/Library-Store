@@ -16,17 +16,17 @@
         <div class="container">
             <nav class="links">
                 <ul>
-                    <a href="./library.html">HOME</a>
-                    <a href="./about.html">ABOUT</a>
-                    <a href="./books.html">BOOKS</a>
-                    <a href="./contact.html">CONTACT</a>
-                    <a href="./dashboard/books.html">DASHBOARD</a>
+                    <a href="./library.php">HOME</a>
+                    <a href="./about.php">ABOUT</a>
+                    <a href="./books.php">BOOKS</a>
+                    <a href="./contact.php">CONTACT</a>
+                    <a href="./dashboard/books.php">DASHBOARD</a>
 
                 </ul>
                 <div class="icons">
                     <a href="#"><i class='bx bx-heart'></i></i></a>
                     <a href="#"><i class='bx bx-cart'></i></a>
-                    <a href="./login.html" class="icons_login">Login</a>
+                    <a href="./login.php" class="icons_login">Login</a>
                 </div>
             </nav>
             <div class="text-content">
@@ -36,7 +36,7 @@
                         beacons of hope and wisdom, proving that the wealth of knowledge is the greatest treasure of all
                         therefore a library should never be considered a luxury, for it is, , one of life's deepest
                         necessities!</p>
-                    <a class="learn-more" href="./about.html">Learn more</a>
+                    <a class="learn-more" href="./about.php">Learn more</a>
                 </div>
                 <img src="./images/PHOTTO.png" alt="" class="right-image">
             </div>

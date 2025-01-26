@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <a href="library.html" class="back-arrow">
+    <a href="library.php" class="back-arrow">
       <i class="fa-solid fa-arrow-left"></i>
     </a>
 

@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="back-arrow">
-      <a href="./library.html"><i class="bx bx-arrow-back"></i></a>
+      <a href="./library.php"><i class="bx bx-arrow-back"></i></a>
     </div>
     <div class="contact-form-container">
       <h1>Contact Us</h1>

@@ -22,25 +22,25 @@
         <div class="nav_items">
           <ul>
             <li class="active">
-              <a href="./users.html">
+              <a href="./users.php">
                 <i class="bi bi-person"></i>
                 <p>Users</p>
               </a>
             </li>
             <li>
-              <a href="./books.html">
+              <a href="./books.php">
                 <i class="bi bi-book"></i>
                 <p>Books</p>
               </a>
             </li>
             <li>
-              <a href="./inventory.html">
+              <a href="./inventory.php">
                 <i class="bi bi-box"></i>
                 <p>Inventory</p>
               </a>
             </li>
             <li>
-              <a href="./loans.html">
+              <a href="./loans.php">
                 <i class="bi bi-card-checklist"></i>
                 <p>Loans</p>
               </a>
@@ -48,7 +48,7 @@
           </ul>
           <ul>
             <li>
-              <a href="../library.html">
+              <a href="../library.php">
                 <i class="bi bi-arrow-left"></i>
                 <p>Web</p>
               </a>
