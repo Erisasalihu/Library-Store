@@ -1,3 +1,23 @@
+<?php
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+
+    include './db/db.php';
+    include './php/func_book.php';
+
+    session_start();
+
+    if (isset($_GET['search']) && !empty($_GET['search'])) {
+        $key = $_GET['search'];
+        $books = search_books($conn, $key);
+    } else {
+        $books = get_books($conn);
+    }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +40,8 @@
                 <a href="./about.php">ABOUT</a>
                 <a href="./books.php">BOOKS</a>
                 <a href="./contact.php">CONTACT</a>
-                <a href="./dashboard/books.php">DASHBOARD</a>
-            </ul>
+                <a href="<?php echo ($_SESSION['user']['role'] === 'admin') ? './dashboard/books.php' : './dashboard/loans.php'; ?>">DASHBOARD</a>
+                </ul>
             <div class="icons">
                 <a href="#"><i class='bx bx-heart'></i></i></a>
                 <a href="#"><i class='bx bx-cart'></i></a>
@@ -41,175 +61,32 @@
     <div class="featured-books">
         <h1>Featured Books</h1>
 
-        <div class="featured-book-box">
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book1.jpg" alt="">
-                </div>
+        <?php if (count($books) === 0) { ?>
+            <div class="empty_data">No data</div>
+            <?php } ?>
 
-                <div class="featured-book-tag">
-                    <h2 class="writer">Kristin Hannah</h2>
-                    <p class="tittle">The Women</p>
-                    <p class="book-price">$21.00 <sub><del>$28.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
+            <?php if (count($books) > 0) { ?>
+    <div class="featured-book-box">
+        
+        <?php foreach ($books as $book): ?>
+        <div class="featured-book-card">
+         <div class="featured-book-img">
+                <img src="./uploads/<?php echo htmlspecialchars($book['image']); ?>" alt="<?php echo htmlspecialchars($book['title']); ?>">
             </div>
 
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book2.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer"> Amy Tan, David Allen Sibley</h2>
-                    <p class="tittle">The Backyard Bird Chronicles</p>
-                    <p class="book-price">$30.00 <sub><del>$35.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book3.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Jill Sanders</h2>
-                    <p class="tittle">Holiday Romance</p>
-                    <p class="book-price">$5.00 </p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book4.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer"> Amanda James</h2>
-                    <p class="tittle">The Garden of Memories</p>
-                    <p class="book-price">$10.00 <sub><del>$15.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book5.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Miranda July</h2>
-                    <p class="tittle">All Fours</p>
-                    <p class="book-price">$26.00 <sub><del>$32.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book6.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer"> Hampton Sides</h2>
-                    <p class="tittle">The Wide Wide Sea</p>
-                    <p class="book-price">$30.00 <sub><del>$35.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book7.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Max Boot</h2>
-                    <p class="tittle">Reagan: His Life and Legend</p>
-                    <p class="book-price">$40.00 <sub><del>$45.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book8.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Dolly Alderton</h2>
-                    <p class="tittle">Good Material</p>
-                    <p class="book-price">$13.00 </p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book9.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer"> Stanley Tucci</h2>
-                    <p class="tittle">What I Ate in One Year</p>
-                    <p class="book-price">$35.00 </p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book10.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Brigid Delaney</h2>
-                    <p class="tittle">Reasons Not to Worry</p>
-                    <p class="book-price">$16.00 <sub><del>$18.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book11.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Emma C. Wells</h2>
-                    <p class="tittle">This Girl's a Killer</p>
-                    <p class="book-price">$16.00 </p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/book12.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Jeneva Rose</h2>
-                    <p class="tittle">You Shouldn't Have Come Here</p>
-                    <p class="book-price">$15.00 <sub><del>$19.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
+            <div class="featured-book-tag">
+                <h2 class="tittle"><?php echo htmlspecialchars($book['title']); ?></h2>
+                <p class="writer"><?php echo htmlspecialchars($book['author']); ?></p>
+                
+                <a href="./borrow.php?id=<?php echo htmlspecialchars($book['id']); ?>" class="f-btn">Read More</a>
         </div>
+    </div>
+<?php endforeach; ?>
+</div>
+<?php } ?>
+
+
+          
     </div>
 
     <!-- BOOKS -->
@@ -221,125 +98,7 @@
 
     <!-- BESTSELLER -->
 
-    <div class="featured-books">
-        <h1>Bestsellers</h1>
-
-        <div class="featured-book-box">
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/bestseller1.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Cher
-                    </h2>
-                    <p class="tittle">Cher</p>
-                    <p class="book-price">$31.00 <sub><del>$28.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/bestseller2.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Percival Everett</h2>
-                    <p class="tittle">James</p>
-                    <p class="book-price">$19.00 <sub><del>$28.00</del></sub></p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/bestseller3.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">David Baldacci</h2>
-                    <p class="tittle">To Die For</p>
-                    <p class="book-price">$33.00 </p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/bestseller4.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Paula Hawkins</h2>
-                    <p class="tittle">The Blue Hour</p>
-                    <p class="book-price">$28.00 </p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="featured-book-card">
-                <div class="featured-book-img">
-                    <img src="./images/bestseller5.jpg" alt="">
-                </div>
-
-                <div class="featured-book-tag">
-                    <h2 class="writer">Suzanne Collins</h2>
-                    <p class="tittle">The Hunger Games</p>
-                    <p class="book-price">$21.00 </p>
-
-                    <a href="#" class="f-btn">Read More</a>
-                </div>
-            </div>
-
-        </div>
-
-
-            <img src="./images/Screenshot_2.png" class="foto1">
-
-
-
-        <!-- services -->
-        <div class="services">
-            <div class="services-box">
-
-                <div class="services-card">
-                    <i class='bx bxs-truck'></i>
-                    <h3>Fast Delivery</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
-                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
-                        minima quidem quibusdam laborum iste!</p>
-                </div>
-
-                <div class="services-card">
-                    <i class='bx bx-headphone'></i>
-                    <h3>24 x 7 Services</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
-                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
-                        minima quidem quibusdam laborum iste!</p>
-                </div>
-
-                <div class="services-card">
-                    <i class='bx bxs-purchase-tag-alt'></i>
-                    <h3>Best Deal</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
-                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
-                        minima quidem quibusdam laborum iste!</p>
-                </div>
-
-                <div class="services-card">
-                    <i class='bx bxs-lock-alt'></i>
-                    <h3>Secure payment</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime debitis explicabo
-                        laborum modi. Porro vel nobis aliquam ab illo aspernatur corrupti molestiae aut, provident
-                        minima quidem quibusdam laborum iste!</p>
-                </div>
-            </div>
-        </div>
+        <?php include './best_books.php'; ?>
 
 
         <!-- FOOTER -->

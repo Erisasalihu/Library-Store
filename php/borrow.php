@@ -33,11 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
                 if ($inventoryRes) {
                     
-                    header("Location: ../index.php");
+                    header("Location: ../library.php");
                     exit;
                 } else {
                     
-                    header("Location: ../index.php");
+                    header("Location: ../library.php");
                     exit;
                 }
             } else {

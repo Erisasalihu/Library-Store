@@ -8,6 +8,11 @@
 
     session_start();
 
+    if (!(isset($_SESSION['user'])) || $_SESSION['user']['role'] !== 'admin') {
+        header("Location: ../library.php");
+        exit;
+    }
+
     if (isset($_GET['search']) && !empty($_GET['search'])) {
         $key = $_GET['search'];
         $books = search_books($conn, $key);

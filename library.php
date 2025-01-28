@@ -1,3 +1,11 @@
+<?php
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+
+    session_start();
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +28,7 @@
                     <a href="./about.php">ABOUT</a>
                     <a href="./books.php">BOOKS</a>
                     <a href="./contact.php">CONTACT</a>
-                    <a href="./dashboard/books.php">DASHBOARD</a>
-
+                    <a href="<?php echo (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'admin') ? './dashboard/books.php' : './dashboard/loans.php'; ?>">DASHBOARD</a>
                 </ul>
                 <div class="icons">
                     <a href="#"><i class='bx bx-heart'></i></i></a>

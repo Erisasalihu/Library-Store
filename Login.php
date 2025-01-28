@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $loginForm) {
         if ($user) {
             $errors['email'] = "Email already exists.";
             $_SESSION['error_message'] = "Email already exists.";
-            header("Location: ./Login.php");
+            header("Location: ./login.php");
             exit;
         }
 
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $loginForm) {
     
         if ($res) {
             $_SESSION['success_message'] = "Registration successful! You can now log in.";
-            header("Location: ./Login.php");
+            header("Location: ./login.php");
             exit;
         } else {
             $_SESSION['error_message'] = "Registration failed: " . $stmt->error;

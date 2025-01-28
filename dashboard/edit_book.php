@@ -3,7 +3,7 @@
     include '../php/func_book.php';
 
     // if (!(isset($_SESSION['user'])) || $_SESSION['user']['role'] !== 'admin') {
-    //     header("Location: ../index.php");
+    //     header("Location: ../library.php");
     //     exit;
     // }
     

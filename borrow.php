@@ -27,19 +27,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Store</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./borrow.css">
+    <link rel="stylesheet" href="./books.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 
 <body>
     <main class="landing">
-        <?php include './includes/landing_nav.php'; ?>
 
         <section class="landing_content borrow_section">
             <button class="back">
                 <i class="bi bi-arrow-left"></i>
                 <span>Back</span>
-                <a href="./index.php" id="redirectLink" style="display: none;">Go to Example</a>
+                <a href="./library.php" id="redirectLink" style="display: none;">Go to Example</a>
             </button>
             <div class="borrow">
                 <img src="./uploads/<?php echo htmlspecialchars($book['image']); ?>" alt="" class="borrow_img">
@@ -118,6 +120,17 @@
         document.getElementById('redirectLink').click();
     })
     </script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script>
+            $('.featured-book-box').slick({
+                dots: true,
+                slidesToShow: 5,
+                slidesToScroll: 5
+            })
+        </script>
 
 </body>
 
