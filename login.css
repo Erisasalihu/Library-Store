@@ -236,3 +236,23 @@ body {
 .container.active .toggle-right {
   transform: translateX(200%);
 }
+
+.alert {
+  min-width: 250px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background-color: var(--gray-3);
+  color: var(--white-color);
+  font-size: 16px;
+}
+
+.alert.success {
+  background-color: green;
+}
+
+.alert.error {
+  background-color: orangered;
+}

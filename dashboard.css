@@ -41,6 +41,14 @@ input {
   font-size: 16px;
 }
 
+.alert.success {
+  background-color: green;
+}
+
+.alert.error {
+  background-color: orangered;
+}
+
 nav {
   display: flex;
   flex-direction: column;
