@@ -25,7 +25,7 @@
             <div class="icons">
                 <a href="#"><i class='bx bx-heart'></i></i></a>
                 <a href="#"><i class='bx bx-cart'></i></a>
-                <a href="./Login.php" class="icons_login">Login</a>
+                <a href="./login.php" class="icons_login">Login</a>
             </div>
         </nav>
     </div>
