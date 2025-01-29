@@ -42,11 +42,13 @@
     <?php include './includes/landing_nav.php'; ?>
 
         <section class="landing_content borrow_section">
+           
             <button class="back">
-                <i class="bi bi-arrow-left"></i>
-                <span>Back</span>
+    <i class="bi bi-arrow-left"></i>
+</button>
+                
                 <a href="./library.php" id="redirectLink" style="display: none;">Go to Example</a>
-            </button>
+            
             <div class="borrow">
                 <img src="./uploads/<?php echo htmlspecialchars($book['image']); ?>" alt="" class="borrow_img">
                 <div class="borrow_details">
