@@ -554,3 +554,7 @@ input[type="date"] {
   background: #ccc;
   cursor: not-allowed;
 }
+
+.table_actions form {
+  margin-top: 0 !important;
+}

@@ -2,10 +2,13 @@
     include '../db/db.php';
     include '../php/func_book.php';
 
-    // if (!(isset($_SESSION['user'])) || $_SESSION['user']['role'] !== 'admin') {
-    //     header("Location: ../library.php");
-    //     exit;
-    // }
+ 
+    session_start();
+
+    if (!(isset($_SESSION['user'])) || $_SESSION['user']['role'] !== 'admin') {
+        header("Location: ../library.php");
+        exit;
+    }
     
     $book_id = isset($_GET['id']) ? htmlspecialchars($_GET['id']) : null;
     $book = get_book($conn, $book_id);

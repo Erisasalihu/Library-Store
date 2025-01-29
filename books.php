@@ -34,25 +34,13 @@
 </head>
 <body>
     <div class="container">
-        <nav class="links">
-            <ul>
-                <a href="./library.php">HOME</a>
-                <a href="./about.php">ABOUT</a>
-                <a href="./books.php">BOOKS</a>
-                <a href="./contact.php">CONTACT</a>
-                <a href="<?php echo ($_SESSION['user']['role'] === 'admin') ? './dashboard/books.php' : './dashboard/loans.php'; ?>">DASHBOARD</a>
-                </ul>
-            <div class="icons">
-                <a href="#"><i class='bx bx-heart'></i></i></a>
-                <a href="#"><i class='bx bx-cart'></i></a>
-                <a href="./login.php" class="icons_login">Login</a>
-            </div>
-        </nav>
+    <?php include './includes/landing_nav.php'; ?>
     </div>
-    <div class="search-bar">
-        <input type="search" placeholder="What are you looking for?">
-        <a href="#" class="search-icon"><i class='bx bx-search'></i></a>
-    </div>
+    <form class="search-bar" action="./books.php">
+        <input type="search" placeholder="What are you looking for?" name="search"
+          value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" />
+       
+    </form>
 
     <img src="./images/Screenshot_3.png" class="foto1">
 

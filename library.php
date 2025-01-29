@@ -22,20 +22,7 @@
 
     <section class="home">
         <div class="container">
-            <nav class="links">
-                <ul>
-                    <a href="./library.php">HOME</a>
-                    <a href="./about.php">ABOUT</a>
-                    <a href="./books.php">BOOKS</a>
-                    <a href="./contact.php">CONTACT</a>
-                    <a href="<?php echo (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'admin') ? './dashboard/books.php' : './dashboard/loans.php'; ?>">DASHBOARD</a>
-                </ul>
-                <div class="icons">
-                    <a href="#"><i class='bx bx-heart'></i></i></a>
-                    <a href="#"><i class='bx bx-cart'></i></a>
-                    <a href="./login.php" class="icons_login">Login</a>
-                </div>
-            </nav>
+        <?php include './includes/landing_nav.php'; ?>
             <div class="text-content">
                 <div class="content">
                     <h1>LIBRARY-STORE</h1>
